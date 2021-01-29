@@ -1,7 +1,7 @@
 <html lang='en'>
   <head>
     <meta charset='UTF-8'/>
-    <title>Miguel's site</title>
+    <title>Technical topic</title>
     <link rel='stylesheet' href='styles.css'/>
     <meta name='viewport'
       content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
@@ -17,7 +17,71 @@
         </nav>
       </header>
         <div class="content page">
-          <p>Your cool TOPIC content here!</p>
+          <h1 class="underline">Design Pattern - Singleton Pattern</h1>
+          <article>
+            <h2 class="underline">1. What is a design pattern</h2>
+            <p>A design pattern is a <strong> well-proved solution </strong> for solving a specific problem/task.</p>
+            <p>By using a design pattern you can make your code more flexible, reusable and maintainable. It is the most important part because java internally follows design patterns.</p>
+          </article>
+          <article>
+            <h2 class="underline">2. Singleton pattern</h2>
+            <p>Singleton pattern is one of the simplest design patterns in Java. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.</p>
+            <p>This pattern involves a single class which is responsible to create an object while making sure that only a single object gets created. This class provides a way to access its only object which can be accessed directly without need to instantiate the object of the class.</p>
+          </article>
+          <article>
+            <h2 class="underline">3. Singleton pattern</h2>
+            <p>We're going to create a SingleObject class. A singleObject class has its constructor as private and has a static instance of itself.</p>
+            <p>A singleObject class provides a static method to get its static instance to outside world</p>
+            <figure>
+            <figcaption>Create a Singleton Class.</figcaption>
+            <pre>
+              <code contenteditable spellcheck="false">
+  public class SingleObject {
+
+     //create an object of SingleObject
+     private static SingleObject instance = new SingleObject();
+
+     //make the constructor private so that this class cannot be
+     //instantiated
+     private SingleObject(){}
+
+     //Get the only object available
+     public static SingleObject getInstance(){
+        return instance;
+     }
+
+     public void showMessage(){
+        System.out.println("Hello World!");
+     }
+  }
+              </code>
+            </pre>
+          </figure>
+          </article>
+          <article>
+            <h2 class="underline">4. Using the singleton pattern</h2>
+            <figure>
+            <figcaption>How to use.</figcaption>
+            <pre>
+              <code contenteditable spellcheck="false">
+  public class SingletonPatternDemo {
+     public static void main(String[] args) {
+
+        //illegal construct
+        //Compile Time Error: The constructor SingleObject() is not visible
+        //SingleObject object = new SingleObject();
+
+        //Get the only object available
+        SingleObject object = SingleObject.getInstance();
+
+        //show the message
+        object.showMessage();
+     }
+  }
+              </code>
+            </pre>
+          </figure>
+          </article>
         </div>
     </div>
 

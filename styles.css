@@ -10,6 +10,7 @@ header {
 
 .wrapper {
   min-height:100%;
+  margin-bottom: 50px;
 }
 
 .header {
@@ -58,6 +59,42 @@ li a:hover {
   align-items: center;
 }
 
+.underline{
+  text-decoration: underline;
+}
+
+h1{
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+h2{
+  margin-top: 10px;
+}
+
+p {
+  margin-top: 1em ;
+  margin-bottom: 1em ;
+}
+
+article {
+  margin-bottom: 35px;
+}
+
+code{
+  background-color: FloralWhite;
+}
+
+pre {
+  overflow: auto;
+  text-align: left;
+}
+pre > code {
+  display: block;
+  padding: 1rem;
+  word-wrap: normal;
+}
+
 .footer {
   position: fixed;
   left: 0;
@@ -83,9 +120,6 @@ footer {
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
-  body {
-    background-color: #F09A9D; /* Red */
-  }
 }
 
 /* Tablet Styles */
